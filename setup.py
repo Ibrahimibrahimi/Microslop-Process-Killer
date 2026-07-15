@@ -1,8 +1,22 @@
 from cx_Freeze import setup, Executable
+import os
 
+
+# build binaries
 setup(
     name="MyApp",
     version="1.0",
     description="My Python App",
     executables=[Executable("killing_fck_microslop_useless_process.py")]
 )
+
+# create config files inside the folder
+folder = "/build/"
+full_path = folder + os.listdir(folder)[0] # get build folder
+
+with open(f"{full_path}/settings.cfg","w") as file :
+    file.write("true")
+    file.write("tofuck.txt")
+
+with open(f"{full_path}/tofuck.txt","w") as file :
+    file.writelines(["TrustedInstaller.exe", "TiWorker.exe","GoogleCrashHandler64.exe","GoogleCrashHandler.exe"])
