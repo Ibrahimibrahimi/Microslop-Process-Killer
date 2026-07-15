@@ -21,8 +21,10 @@ setup(
 ```
 
 ### locate the target file
-├── myfile.py
-└── setup.py
+├── myfile.py # file to build
+├── tofuck.txt # list of useless process
+├── settings.cfg # settings (line1 = either to load settings.cfg or not , line2 = path to tofuck.txt)
+└── setup.py # builder script
 
 ### build
 ```sh
