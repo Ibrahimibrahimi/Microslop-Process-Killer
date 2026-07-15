@@ -18,8 +18,8 @@ full_path = folder + os.listdir(folder)[0] # get build folder
 
 with open(f"{full_path}/settings.cfg","w") as file :
     file.write("true\n")
-    file.write("tofuck.txt")
+    file.write("tokill.txt")
 
-with open(f"{full_path}/tofuck.txt","w") as file :
+with open(f"{full_path}/tokill.txt","w") as file :
     for i in ["TrustedInstaller.exe", "TiWorker.exe","GoogleCrashHandler64.exe","GoogleCrashHandler.exe"] :
         file.write(i + "\n")
