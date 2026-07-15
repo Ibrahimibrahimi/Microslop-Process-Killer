@@ -1,0 +1,4 @@
+TrustedInstaller.exe
+TiWorker.exe
+GoogleCrashHandler64.exe
+GoogleCrashHandler.exe
