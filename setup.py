@@ -1,5 +1,5 @@
 from cx_Freeze import setup, Executable
-import os
+import os,time
 
 
 # build binaries
@@ -11,12 +11,15 @@ setup(
 )
 
 # create config files inside the folder
-folder = "/build/"
+
+time.sleep(2) # wait until build is complete
+folder = "build/"
 full_path = folder + os.listdir(folder)[0] # get build folder
 
 with open(f"{full_path}/settings.cfg","w") as file :
-    file.write("true")
+    file.write("true\n")
     file.write("tofuck.txt")
 
 with open(f"{full_path}/tofuck.txt","w") as file :
-    file.writelines(["TrustedInstaller.exe", "TiWorker.exe","GoogleCrashHandler64.exe","GoogleCrashHandler.exe"])
+    for i in ["TrustedInstaller.exe", "TiWorker.exe","GoogleCrashHandler64.exe","GoogleCrashHandler.exe"] :
+        file.write(i + "\n")
