@@ -1,0 +1,11 @@
+process_names:
+  - TrustedInstaller.exe
+  - TiWorker.exe
+  - GoogleCrashHandler64.exe
+  - GoogleCrashHandler.exe
+
+process_list_file: tofuck.txt
+scan_interval: 3
+log_file: null
+dry_run: false
+verbose: false
